@@ -1,0 +1,117 @@
+@media only screen and (max-width:800px) {
+    .about_hero_section .about_hero_container {
+        flex-direction: column;
+    }
+
+    .course_section .course_container .course_content_container {
+        grid-template-columns: auto auto;
+    }
+
+    .contact_section .contact_container {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    body {
+        visibility: visible;
+    }
+
+    .menu_bar_open,
+    .menu_bar_close {
+        display: block;
+        color: var(--light-color);
+        background: var(--marker-color);
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+    }
+
+    .menu_bar_close {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .navbar_conatiner {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: var(--primary-color);
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: all 0.5s linear;
+    }
+
+    .nav_menu_back {
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(95, 45, 237, 0.25);
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transform: translateX(-100%);
+        transition: all 0.7s linear;
+
+    }
+
+    .header_right.active .navbar_conatiner,
+    .header_right.active .nav_menu_back {
+        transform: translateX(0%);
+    }
+
+    header .header_container .header_right .navbar_conatiner .nav_list,
+    .faq_section .faq_container .faq_content_container {
+        flex-direction: column;
+    }
+
+    .hero_section .hero_container {
+        flex-direction: column-reverse;
+
+    }
+
+    .categories_section .categories_container .categories_content_container {
+        grid-template-columns: auto auto;
+    }
+
+    .faq_section .faq_container .faq_content_container .col {
+        flex: auto;
+        width: 100%;
+    }
+
+    .footer_section .footer_container {
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .about_team_section .about_team_container .content_container {
+        grid-template-columns: auto;
+    }
+
+    .course_section .course_container .course_content_container {
+        grid-template-columns: auto;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .categories_section .categories_container .categories_content_container{
+        grid-template-columns: auto;
+    }
+}
